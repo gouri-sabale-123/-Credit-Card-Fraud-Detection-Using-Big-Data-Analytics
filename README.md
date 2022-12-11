@@ -1,11 +1,11 @@
 
-### Credit Card Fraud Detection Using Real Time Big Data Analytics
+#### Credit Card Fraud Detection Using Real Time Big Data Analytics
 
 Gouri Babasaheb Sabale
 Gowtham Kishore Mahadasu
 
 
-### Overview 
+#### Overview 
 
 This project aims to develop a real-time big data analytics application that is used for Credit Card Fraud Detection. As a part of this project, we will perform real-time data processing of Credit Card Transactions using Apache Kafka Streaming. We will detect fraudulent transactions using Apache Spark and Machine Learning Algorithms and make predictions by learning from historical data. The results of fraudulent transactions and normal transactions would be displayed in the form of alerts on intelligent Dashboards.
 
@@ -23,33 +23,33 @@ The results of prediction models are displayed on the Fraud Alert dashboard. Our
 
 
 The high level design of our system is as follows:
-### The File System 
+#### The File System 
 It stores customer specific data related to credit card transactions.
 There are two files in this system.One is used to store customer’s data and the other is used to store data related to credit card transactions.
 
-### Spark SQL job: 
+#### Spark SQL job: 
 This job performs the following operations.
 Read data related to customers including credit card transactions from the file system.
 Write the data to Cassandra database tables.
 
-### Spark ML job: 
+#### Spark ML job: 
 Read the customer and transactions specific data from Cassandra
 Pre-process the data using techniques like String indexer ,One hot encoder and vector assembler
 Use K means algorithm to balance the data related to fraud and non fraud transactions
 Use Random Forest to train the data and build ML models.
 Save the models back to the file system.
 
-### Credit Card producer:
+#### Credit Card producer:
 Generate real time credit card transactions using Apache Kafka framework and Avro Schemas
 Store these transactions on Kafka topics.
 
-### Spark Streaming job: 
+#### Spark Streaming job: 
  Load ML models from file system.
 Consume credit card transactions from Kafka topics. 
 Predict whether credit card transactions are fraud or not by referring to ML models.
 Save the results of predictions into the Cassandra database.
 
-### Fraud Alert Dashboard:
+#### Fraud Alert Dashboard:
 Read the analysis results from Cassandra. 
 Display fraudulent and non fraudulent credit card transactions on a real time fraud alert dashboard.
 
